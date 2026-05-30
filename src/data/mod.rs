@@ -16,7 +16,7 @@ pub struct DailyRecord {
     pub fine_dust: f64,
 }
 
-#[derive(Debug, Clone, Serialize, Deserialize)]
+#[derive(Debug, Clone)]
 pub struct FeatureRow {
     pub date: NaiveDate,
     pub visits: f64,
@@ -26,6 +26,7 @@ pub struct FeatureRow {
     pub roll_mean_7: f64,
     pub roll_std_7: f64,
     pub roll_mean_14: f64,
+    pub roll_std_14: f64,
     pub dow_sin: f64,
     pub dow_cos: f64,
     pub month_sin: f64,

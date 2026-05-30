@@ -9,6 +9,7 @@ pub struct ModelParams {
     pub max_depth: usize,
     pub learning_rate: f64,
     pub min_samples_leaf: usize,
+    pub early_stopping_rounds: usize,
 }
 
 impl Default for ModelParams {
@@ -18,6 +19,7 @@ impl Default for ModelParams {
             max_depth: 5,
             learning_rate: 0.1,
             min_samples_leaf: 5,
+            early_stopping_rounds: 10,
         }
     }
 }
@@ -26,4 +28,6 @@ impl Default for ModelParams {
 pub struct ForecastResult {
     pub date: NaiveDate,
     pub predicted_visits: f64,
+    pub lower_bound: f64,
+    pub upper_bound: f64,
 }
