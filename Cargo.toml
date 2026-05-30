@@ -1,0 +1,18 @@
+[package]
+name = "er_forecast"
+version = "1.0.0"
+edition = "2024"
+
+[[bin]]
+name = "er_forecast"
+path = "src/main.rs"
+
+[dependencies]
+clap = { version = "4.6.1", features = ["derive"] }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.150"
+chrono = { version = "0.4.44", features = ["serde"] }
+rand = { version = "0.10.1", features = ["std_rng"] }
+rand_distr = "0.6.0"
+csv = "1.4.0"
+anyhow = "1.0.102"
